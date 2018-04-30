@@ -2,4 +2,7 @@
 
 <button (click) = "addToList(input1.value)"> Add </button>
 
-<p> {{list}} </p>
+<li *ngFor="let index of list">
+  {{index}} <button (click) = "deleteFromList(index)"> Delete </button>
+</li> 
+

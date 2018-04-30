@@ -17,4 +17,8 @@ addToList(input1){
   return this.list;
 }
 
+deleteFromList(index){
+  this.list.splice(index, 0);
+}
+
 }
