@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  
+list: string[] = []; 
+
+addToList(input1){
+  console.log(input1);
+  this.list.push(input1);
+  console.log(this.list);
+  return this.list;
+}
+
 }
