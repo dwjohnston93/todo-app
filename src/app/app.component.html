@@ -1,8 +1,9 @@
+<div>
 <input type = "string" #input1>
 
 <button (click) = "addToList(input1.value)"> Add </button>
 
-<li *ngFor="let index of list">
-  {{index}} <button (click) = "deleteFromList(index)"> Delete </button>
+<li *ngFor="let item of list; let i = index">
+  {{i+1}} {{item}} <button (click) = "deleteFromList(item)"> Delete </button>
 </li> 
-
+</div> 

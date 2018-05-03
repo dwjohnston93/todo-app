@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoService } from './todo.service'
 
 @Component({
   selector: 'app-root',
@@ -10,15 +11,28 @@ export class AppComponent {
   
 list: string[] = []; 
 
-addToList(input1){
-  console.log(input1);
-  this.list.push(input1);
-  console.log(this.list);
-  return this.list;
+constructor (private _todo: TodoService){
+  this.list = this._todo.list; 
 }
 
-deleteFromList(index){
-  this.list.splice(index, 0);
+// addToList(input1){
+//   this.list.push(input1);
+//   return this.list;
+// }
+
+addToList(todo){
+  this._todo.addToListService(todo);
+  //this.todo = ""; 
+}
+
+
+// deleteFromList(todo){
+//   let indexTodo = this.list.indexOf(todo);  
+//   this.list.splice(indexTodo, 1); 
+// }
+
+deleteFromList(todo){
+ this._todo.deleteFromListService(todo); 
 }
 
 }
