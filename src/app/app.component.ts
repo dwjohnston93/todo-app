@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TodoService } from './todo.service'
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -22,7 +24,7 @@ constructor (private _todo: TodoService){
 
 addToList(todo){
   this._todo.addToListService(todo);
-  //this.todo = ""; 
+  this.todo = ""; 
 }
 
 

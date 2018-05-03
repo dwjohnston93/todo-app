@@ -1,5 +1,5 @@
 <div>
-<input type = "string" #input1>
+<input  [(ngModel)] = "todo" #input1>
 
 <button (click) = "addToList(input1.value)"> Add </button>
 
